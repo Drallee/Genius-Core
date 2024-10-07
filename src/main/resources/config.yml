@@ -1,0 +1,93 @@
+settings: # SETTINGS THAT CHANGE STUFF
+  time:
+    units:
+      years: 'yrs'
+      year: 'yr'
+      months: 'mos'
+      month: 'mo'
+      weeks: 'weeks'
+      week: 'week'
+      days: 'days'
+      day: 'day'
+      hours: 'hrs'
+      hour: 'hr'
+      minutes: 'mins'
+      minute: 'min'
+      seconds: 'secs'
+      second: 'sec'
+  motd:
+    ping:
+      enable: true
+      message: |
+        &c&lGenius Core &7By Dralle
+        &7Thanks for using Genius Core
+    join:
+      enable: true
+      message: |
+        &eMessage of the day
+        &r
+        &c&lGenius Core &7By Dralle
+        &7Thanks for using Genius Core
+        &r
+        &7Server Version: &2{server_version}
+        &7Minecraft Version: &2{minecraft_version}
+        &7Plugin version: &a{plugin_version}
+        &r
+        &7Join our discord &b&n{discord_link}
+        &7Check out our website &b&n{website_link}
+        &r
+# GUI NAMES
+GUI:
+  menus:
+    all-players-list: # THIS LIST IS PROTECTED WITH PERMISSION: genius.list.all
+      title: '&rAll Players list (&a{total}&r)'
+      item:
+        name: '&c{player}'
+        lore: |
+          &7Info:
+          &r  &7Status &r{lastPlayed}
+          &r  &7First joined: &e{firstPlayed} &7ago
+          &r  &7Total play time: &e{totalWorldTime}
+          &r  &7Whitelisted: &r{isWhitelisted}
+          &r  &7Location:
+          &r    &7World: &a{loc_world}
+          &r    &7X: &b{loc_x}
+          &r    &7Y: &c{loc_y}
+          &r    &7Z: &d{loc_z}
+          &r    &7Yaw: &e{loc_yaw}
+          &r    &7Pitch: &f{loc_pitch}
+    player-list:
+      title: '&rPlayer list &r(&a{current}&7/&c{max}&r)'
+      item:
+        name: '&c{player}'
+        lore: |
+          &7Info:
+          &r  &7First joined: &e{firstPlayed} &7ago
+          &r  &7Total play time: &e{totalWorldTime}
+          &r  &7Whitelisted:&r {isWhitelisted}
+          &r  &7Location:
+          &r    {location}
+
+formatting:
+  location: '&7world: &a{world}, &7X: &b{x}, &7Y: &c{y}, &7Z: &d{z}, &7Yaw: &e{yaw}, &7Pitch: &f{pitch}'
+  #location: |
+  #  &r  &eworld: &a{world}
+  #  &r  &eX: &c{x}
+  #  &r  &eY: &b{y}
+  #  &r  &eZ: &d{z}
+  #  &r  &eYaw: &d{yaw}
+  #  &r  &ePitch: &d{pitch}
+  whitelisted:
+    true: '&aYes'
+    false: '&cNo'
+  lastPlayed:
+    command:
+      online: '&e{player} &7is currently &aonline'
+      offline: '&e{player} &7was last seen &e{time} &7ago'
+      never-played: '&e{player} &7has never played on this server'
+    menu:
+      online: '&7is currently &aonline'
+      offline: '&7last played &e{time} &7ago'
+  totalTimePlayed: '&7Total time played &e{time}'
+  website: 'https://dralle.me/'
+  discord: 'https://discord.gg/2kXkEUMeta'

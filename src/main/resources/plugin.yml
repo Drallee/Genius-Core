@@ -1,0 +1,55 @@
+name: Genius-Core
+version: '${project.version}'
+main: me.dralle.genius.Core
+api-version: '1.21'
+prefix: Genius-Core
+load: STARTUP
+author: Dralle
+website: https://dralle.me
+description: "Genius-Core is a core plugin for all of Dralle's plugins"
+commands:
+  list:
+    description: "Show a list of players"
+    usage: "/<command>"
+    aliases: [ playerlist, online ]
+  motd:
+    description: "Sends the message of the day"
+    usage: "/<command>"
+    aliases: [ messageoftheday ]
+  reload-config:
+    permission: genius.reload
+    description: "Reload config"
+    usage: "/<command>"
+  lastseen:
+    aliases: [ last-seen, seen ]
+    description: "Check when a player was last online"
+    usage: "/<command>"
+  viewinventory:
+    aliases:
+      - invsee
+      - inventorysee
+      - vi
+    permission: genius.viewinventory.others
+    description: Allows a player to view others inventories.
+    usage: /<command> <player>
+  viewenderchest:
+    aliases:
+      - vec
+      - viewec
+      - viewechest
+      - vechest
+      - viewender
+    permission: genius.viewenderchest.others
+    description: Allows a player to view others Ender Chests.
+    usage: /<command> <player>
+permissions:
+  genius.reload:
+    description: Reload the config.yml file
+  genius.viewinventory.others:
+    description: Allow a player to view others inventories.
+  genius.others.viewinventory.deny:
+    description: Deny others from viewing their inventory.
+  genius.viewenderchest.others:
+    description: Allow a player to view others ender chests.
+  genius.others.viewenderchest.deny:
+    description: Deny others from viewing their ender chest.
